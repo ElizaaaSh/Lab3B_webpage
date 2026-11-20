@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Справочник пользователей</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <div>
+                <p class="subtitle">Практическое задание 3Б</p>
+                <h1>Справочник пользователей</h1>
+            </div>
+            <button id="load-button" type="button">Загрузить пользователей</button>
+        </header>
+
+        <div class="content-grid">
+            <section class="users-section" aria-labelledby="users-heading">
+                <div class="section-heading">
+                    <h2 id="users-heading">Пользователи</h2>
+                    <span id="users-count" class="count">0</span>
+                </div>
+                <div class="search-field">
+                    <label for="search-input">Поиск по имени</label>
+                    <input id="search-input" type="search" placeholder="Введите имя пользователя" autocomplete="off">
+                </div>
+                <p id="users-status" class="status" role="status" aria-live="polite">Нажмите «Загрузить пользователей».</p>
+                <ul id="users-list" class="users-list" aria-label="Список пользователей"></ul>
+            </section>
+
+            <section class="posts-section" aria-labelledby="posts-heading">
+                <h2 id="posts-heading">Публикации пользователя</h2>
+                <p id="selected-user" class="selected-user">Пользователь не выбран</p>
+                <p id="posts-status" class="status" role="status" aria-live="polite">Выберите пользователя и нажмите «Показать публикации».</p>
+                <ol id="posts-list" class="posts-list" aria-label="Публикации выбранного пользователя"></ol>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
